@@ -70,13 +70,13 @@ p{
     font-weight: 600;
 }
 .link:hover{
-     color: cadetblue;
+     color: rgb(93, 132, 133);
 }
 @media(min-width:768px)
 {
     .formulario{
         margin: auto;
-        width: 500px;
+        width: 800px;
         margin-top: 150px;
         border-radius: 2%;
     }

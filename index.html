@@ -7,111 +7,134 @@
 	<title>MI LISTA DE TAREAS</title>
 	<script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="estilo.css" />
+	<link rel="stylesheet" href="menu.css" />
+	<link rel="stylesheet" href="calendario.css" />
+	<link rel="stylesheet" href="hora.css" />
+
 </head>
 <body>
-    <div class="logo">
-        <img src="img/logo-magtimus-v2.3-1.png" alt="">
+	<div class="logo">
+		<img src="img/logo-magtimus-v2.3-1.png" align="left">
+	</div>
+	<center><header>
+		
+		<nav class="navegacion">
+			<ul class="menu">
+				<li><a href="#"><h2>Inicio</h2></a></li>
+				<li><a href="#"><h2>Nosotros</h2></a></li>
+				<li><a href="#"><h2>Servicios</h2></a>
+					<ul class="submenu">
+						<li><a href="#">Servicio #1</a></li>
+						<li><a href="#">Servicio #2</a></li>
+						<li><a href="#">Servicio #3</a></li>
+					</ul>
+				</li>
+				<li><a href="#"><h2>Contacto</h2></a></li>
+			</ul>
+		</nav>
+	</header></center>
+		<center><ul class="lista">
+		
+			<h1>MI LISTA DE TAREAS</h1>
+			<form id="new-task-form">
+				<input 
+					type="text" 
+					name="new-task-input" 
+					id="new-task-input" 
+					placeholder="Que tareas tienes para hoy?" />
+				<input type="submit"id="new-task-submit" value="AGREGAR TAREA" class="button"/>
+			</form>
+	
+			<section class="task-list">
+				<h2>Tareas</h2>
+	
+				<div id="tasks">
+	
+				 <div class="task">
+						<!--	<div class="content">
+							<input 
+								type="text" 
+								class="text" 
+								value="nueva tarea"
+								readonly>
+						</div>
+						<div class="actions">
+							<button class="Editar">Editar</button>
+							<button class="Borrar">Borrar</button>
+						</div>
+					</div> -->
+				</div>
+	</ul>
+</center>
+<div class="calendar">
+    <div class="calendar__info">
+        <div class="calendar__prev" id="prev-month">&#9664;</div>
+        <div class="calendar__month" id="month"></div>
+        <div class="calendar__year" id="year"></div>
+        <div class="calendar__next" id="next-month">&#9654;</div>
     </div>
-	<body id="body">
-    
-		<header>
-			<div class="icon__menu">
-				<i class="fas fa-bars" id="btn_open"></i>
-			</div>
-		</header>
-	
-		<div class="menu__side" id="menu_side">
-	
-			<div class="name__page">
-				<i class="fab fa-youtube"></i>
-				<h4>MagtimusPro</h4>
-			</div>
-	
-			<div class="options__menu">	
-	
-				<a href="#" class="selected">
-					<div class="option">
-						<i class="fas fa-home" title="Inicio"></i>
-						<h4>Inicio</h4>
-					</div>
-				</a>
-	
-				<a href="#">
-					<div class="option">
-						<i class="far fa-file" title="Portafolio"></i>
-						<h4>Portafolio</h4>
-					</div>
-				</a>
-				
-				<a href="#">
-					<div class="option">
-						<i class="fas fa-video" title="Cursos"></i>
-						<h4>Cursos</h4>
-					</div>
-				</a>
-	
-				<a href="#">
-					<div class="option">
-						<i class="far fa-sticky-note" title="Blog"></i>
-						<h4>Blog</h4>
-					</div>
-				</a>
-	
-				<a href="#">
-					<div class="option">
-						<i class="far fa-id-badge" title="Contacto"></i>
-						<h4>Contacto</h4>
-					</div>
-				</a>
-	
-				<a href="#">
-					<div class="option">
-						<i class="far fa-address-card" title="Nosotros"></i>
-						<h4>Nosotros</h4>
-					</div>
-				</a>
-	
-			</div>
-	
-		</div>
-	<header>
-		<h1>MI LISTA DE TAREAS</h1>
-		<form id="new-task-form">
-			<input 
-				type="text" 
-				name="new-task-input" 
-				id="new-task-input" 
-				placeholder="Que tareas tienes para hoy?" />
-			<input type="submit"id="new-task-submit" value="AGREGAR TAREA" class="button"/>
-		</form>
-	</header>
 
-	<main>
-   
-		<section class="task-list">
-			<h2>Tareas</h2>
+    <div class="calendar__week">
+        <div class="calendar__day calendar__item">L</div>
+        <div class="calendar__day calendar__item">M</div>
+        <div class="calendar__day calendar__item">M</div>
+        <div class="calendar__day calendar__item">J</div>
+        <div class="calendar__day calendar__item">V</div>
+        <div class="calendar__day calendar__item">S</div>
+        <div class="calendar__day calendar__item">D</div>
+    </div>
 
-			<div id="tasks">
+    <div class="calendar__dates" id="dates"></div>
+</div>
+<body onload="startTime()">
 
-			 <div class="task">
-					<!--	<div class="content">
-						<input 
-							type="text" 
-							class="text" 
-							value="nueva tarea"
-							readonly>
-					</div>
-					<div class="actions">
-						<button class="Editar">Editar</button>
-						<button class="Borrar">Borrar</button>
-					</div>
-				</div> -->
+    <div class="clockdate">
+        <span id="time"></span>
+        <span id="date"></span>
+    </div>
+    <script>
+        function startTime() {
+            //declaramos las  variables que nos proporcionaran los datos como la hora, minutos etc.
 
-			</div>
-		</section> 
-	</main>
-	<script src="js/script.js"></script>
-</body>
+            var today = new Date(),
+                hours = today.getHours(),
+                minutes = today.getMinutes(),
+                date = today.getDate(),
+                day = today.getDay(),
+                month = today.getMonth();
+
+            //utilizaremos operadores ternarios esto nos ayudara a mostrar la hora solo del 1 al 12
+            hours = (hours == 0) ? 12 : hours;
+            hours = (hours > 12) ? hours - 12 : hours;
+
+            //pasaremos las horas y minutos a una funcion que crearemos mas adelante
+            hours = checkTime(hours);
+            minutes = checkTime(minutes);
+
+            //primero para los dias y meses crearemos un arreglo esto por que la funcion que nos debuelve
+            //los dias y meses nos los debuelbe en numero
+            var dia = ["Domingo", " Lunes", "Martes", "Miercoles", "Jueves", "viernes", "Sabado"],
+                mes = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+            //haora solo imprimimos los datos
+            var hr = document.getElementById('time').innerHTML = hours + ":" + minutes,
+                dt = document.getElementById('date').innerHTML = dia[day] + ", " + date + " De " + mes[month];
+
+            //esta funcion hara que nuestro escript se ejecute constantemente
+            var time = setTimeout(function() {
+                startTime();
+            }, 500);
+        }
+        //solo falta crear la funcion que nos diga si tine uno o dos dijitos
+        //esto para que si solo tiene uno le agrege u  cero a la izquierda
+        function checkTime(e) {
+            if (e < 10) {
+                e = "0" + e;
+            }
+            return e;
+        }
+    </script>
+
+    <script src="menu.js"></script>
 	<script src="app.js"></script>
 </body>
 </html>
