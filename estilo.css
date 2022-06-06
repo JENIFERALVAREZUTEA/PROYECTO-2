@@ -1,12 +1,19 @@
 .logo{
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: left;
 }
 
 .logo img{
   width: 60px;
 }
+.logos img{
+	height: 100%;
+width: 140px;
+}
+.logos{
+	align-items:right;
+	}
 :root {
 	--dark: #dbdfe7;
 	--darker: #dbe0e8;
@@ -166,7 +173,7 @@ main {
 .lista{
     width: 100%;
 	width: 1200px;
-    height: 50vh;
+    height: 40vh;
     display: flex;
     justify-content: right;
     flex-direction: column;
@@ -178,7 +185,7 @@ main {
     background: #4ECDC4;
     width: 80%;
     max-width: 600px;
-    margin: 5em auto;
+    margin: 1em auto;
     padding: .10em 0; 
     
     }
@@ -221,8 +228,8 @@ main {
 
       span:nth-child(1){
         position: relative;
-        width: 600px;
-        line-height: 250px;
+        width: px;
+        line-height:50px;
         border-radius: 150px;
         font-size: 150px;
         box-shadow: -15px -15px 15px var(--shadowLg),

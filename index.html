@@ -13,9 +13,20 @@
 
 </head>
 <body>
+   
+    <div class="logos">
+		<img src="img/logo-magtimus-v2.3-1.png" align="right">
 	<div class="logo">
-		<img src="img/logo-magtimus-v2.3-1.png" align="left">
+	<img src="img/ing.png" align="left">
 	</div>
+
+   <center><body onload="startTime()">
+
+        <div class="clockdate">
+            <span id="time"></span>
+            <span id="date"></span>
+        </div>
+    </center> 
 	<center><header>
 		
 		<nav class="navegacion">
@@ -66,7 +77,10 @@
 				</div>
 	</ul>
 </center>
+<br>
 <div class="calendar">
+        <center><iframe width="500" height="315" src="https://www.youtube.com/embed/iAWHn5dg320" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+    <center><h1>CALENDARIO</h1></center>
     <div class="calendar__info">
         <div class="calendar__prev" id="prev-month">&#9664;</div>
         <div class="calendar__month" id="month"></div>
@@ -86,13 +100,8 @@
 
     <div class="calendar__dates" id="dates"></div>
 </div>
-<body onload="startTime()">
 
-    <div class="clockdate">
-        <span id="time"></span>
-        <span id="date"></span>
-    </div>
-    <script>
+   <script>
         function startTime() {
             //declaramos las  variables que nos proporcionaran los datos como la hora, minutos etc.
 
@@ -136,5 +145,7 @@
 
     <script src="menu.js"></script>
 	<script src="app.js"></script>
+  
+ 
 </body>
 </html>
