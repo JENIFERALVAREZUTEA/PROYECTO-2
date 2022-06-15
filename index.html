@@ -5,11 +5,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MI LISTA DE TAREAS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="estilo.css" />
-	<link rel="stylesheet" href="menu.css" />
-	<link rel="stylesheet" href="calendario.css" />
-	<link rel="stylesheet" href="hora.css" />
+	<link rel="stylesheet" href="CSS/estilo.css" />
+	<link rel="stylesheet" href="CSS/menu.css" />
+	<link rel="stylesheet" href="CSS/calendario.css" />
+	<link rel="stylesheet" href="CSS/hora.css" />
+    <link rel="stylesheet" href="CSS/estilocomentario.css" />
+
 
 </head>
 <body>
@@ -79,8 +82,13 @@
 	</ul>
 </center>
 <br>
+<div class="row">
+    <div class="col-md-4 col-Ig- ">
+        <center><h1>video motivacional</h1></center>
+        <iframe  width="500" height="315" src="https://www.youtube.com/embed/iAWHn5dg320" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></a>
+</div>
+<div class="col-md-5 col-Ig-">
 <div class="calendar">
-        <center><iframe width="500" height="315" src="https://www.youtube.com/embed/iAWHn5dg320" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
     <center><h1>CALENDARIO</h1></center>
     <div class="calendar__info">
         <div class="calendar__prev" id="prev-month">&#9664;</div>
@@ -100,6 +108,7 @@
     </div>
 
     <div class="calendar__dates" id="dates"></div>
+</div>
 </div>
 
    <script>
@@ -144,9 +153,29 @@
         }
     </script>
 
-    <script src="menu.js"></script>
-	<script src="app.js"></script>
+    <script src="JS/menu.js"></script>
+	<script src="JS/app.js"></script>
+
+    <div class="row">
+        <div id="templatemo_contact" class="col-md-4 gallery-contact">
+     </div>
+        <div class="col-md-8 templatemo_contactform">
+        <div class="templatemo_contacttitle">CONSULTAS / SUGERENCIAS</div>
+         <div class="templatemo_sub_contacttitle"> Ayudenos a mejorar nuestro block</div>
+             <p> Escribe aquí el mensaje de sus sugerencias para mejorar rl block.</p>
+     
+        <form action="enviar.php" method="post">
+                             <input type="text" name="name" id="name" class="name" placeholder="NOMBRE">
+                             <input type="text" name="mail" id="mail" class="email" placeholder="CORREO">
+                             <input type="text" name="phone" id="subject" class="subject" placeholder="TELÉFONO">
+                             <textarea name="message" class="message" placeholder="MENSAJE ... " id="message"></textarea>
+                             <div class="clear"></div>
+                                 <div class="col-md-8"> 
+                                     <button type="submit" class="btn btn-primary">ENVIAR </button>
+         </div>
+         </form>
+         </div>
   
- 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
