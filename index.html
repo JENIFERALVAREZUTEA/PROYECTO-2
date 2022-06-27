@@ -22,7 +22,21 @@
 	<div class="logo">
 	<img src="img/logo1.png" align="left">
 	</div>
+<center>
+    <nav class="navegation">
+        <ul>
+    <li class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+    </li>
 
+    <tr><td><form action="" class="search-bar-container">
+         <h1><input type="search" id="search-bar" placeholder="buscar..."></h1>
+        <label for="search-bar" class="fas fa-search"></label>
+    </form></td></tr>
+</ul>
+    </nav>
+</center>
+<br>
    <center><body onload="startTime()">
 
         <div class="clockdate">
@@ -156,25 +170,44 @@
     <script src="JS/menu.js"></script>
 	<script src="JS/app.js"></script>
 
-    <div class="row">
-        <div id="templatemo_contact" class="col-md-4 gallery-contact">
-     </div>
-        <div class="col-md-8 templatemo_contactform">
-        <div class="templatemo_contacttitle">CONSULTAS / SUGERENCIAS</div>
-         <div class="templatemo_sub_contacttitle"> Ayudenos a mejorar nuestro block</div>
-             <p> Escribe aquí el mensaje de sus sugerencias para mejorar rl block.</p>
-     
-        <form action="enviar.php" method="post">
-                             <input type="text" name="name" id="name" class="name" placeholder="NOMBRE">
-                             <input type="text" name="mail" id="mail" class="email" placeholder="CORREO">
-                             <input type="text" name="phone" id="subject" class="subject" placeholder="TELÉFONO">
-                             <textarea name="message" class="message" placeholder="MENSAJE ... " id="message"></textarea>
-                             <div class="clear"></div>
-                                 <div class="col-md-8"> 
-                                     <button type="submit" class="btn btn-primary">ENVIAR </button>
-         </div>
-         </form>
-         </div>
+      </header>
+      
+      <div class="container-contacto">
+      <form action="#" id="form" method="POST">
+        <h2>CONTACTO</h2>
+        <br>
+        <input type="text" name="cliente" id="nombre" placeholder="Ingrese su Nombre" onkeypress="return sololetras(event)" onpaste="return false" required>
+        <input type="text" name="correo" id="correo" placeholder="Ingrese su Correo" required>
+        <input type="text" name="celular" id="celular" placeholder="Ingrese su Celular" onkeypress="return solonumeros(event)" onpaste="return false" required>
+        <textarea name="mensaje" placeholder="Escriba su Mensaje" required></textarea>
+        <input type="submit" id="button-contacto" value="ENVIAR" class="button" onclick="validarCorreo(form.correo.value)">
+      </form>
+      </div>
+    
+        <footer class="footer-section">
+          <div class="copyright-area">
+              <div class="container-footer">
+                  <div class="row-footer">
+                      <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                          <div class="copyright-text">
+                              <p>Copyright &copy; 2022, todos los derechos reservados <a href="index.html">todolist</a></p>
+                          </div>
+                      </div>
+                      <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                          <div class="footer-menu">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </footer>  
+    
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script  src="JS/formulario.js"></script>
+    
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>

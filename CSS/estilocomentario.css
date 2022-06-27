@@ -1,49 +1,39 @@
-
-.templatemo_contacttitle {
-    width: 100%;
-    margin-bottom: 10px;
-    font-size: 32px;
-    font-weight: bold;
-    color: #ffffff;
+/*contacto*/
+.container-contacto{
+    background-image: url("../img/comentario.png");
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin:0;
+    padding: 1rem 0;
+}
+.container-contacto form{
+   
+    width: 450px;
+    margin:auto;
+    background:rgba(18, 148, 145, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}  
+.container-contacto form h2{
+    color: #131111;
     text-align: center;
+    margin:0;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
-
-.templatemo_sub_contacttitle {
+.container-contacto form input,textarea{
     width: 100%;
-    font-size: 22px;
-    color: #91bf24;
-    text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border:none;
 }
-
-.templatemo_contact {
-    margin: 30px;
-    width: 100%;
-    margin-left: 15%;
-}
-
-.templatemo_contactform input, textarea {
-    width: 100%;
-    background: #282828;
-    border: 1px solid #393939;
-    padding: 7px 10px;
-    margin: 0px 0px 10px 0px;
-    background-color: #FAFAFA;
-}
-
-.templatemo_contactform textarea {
-    height: 100px;
-}
-
-
-.templatemo_contactform .btn-primary {
-    background: #92bf24;
-    border: none;
-    border-radius: 0px;
-    color: #3d5602;
-    font-weight: 800;
-}
-
-.templatemo_contactform .btn-primary:hover {
-    background: #a6d82c;
+.container-contacto form textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
 }
