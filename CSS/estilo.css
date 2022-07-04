@@ -15,12 +15,12 @@ width: 130px;
 	}
 :root {
 	--dark: #dbdfe7;
-	--darker: #dbe0e8;
+	--darker: #5075b4;
 	--darkest: #32b0f4;
 	--grey: #06100b;
-	--pink: #EC4899;
-	--purple: #430ebe;
-	--light: rgb(148, 16, 16);
+	--pink: #16040d;
+	--purple: #240c5e;
+	--light: rgb(24, 6, 6);
 }
 
 * {
