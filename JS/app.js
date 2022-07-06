@@ -35,8 +35,16 @@ window.addEventListener('load', () => {
 		task_delete_el.classList.add('delete');
 		task_delete_el.innerText = 'Delete';
 
+/* añadiendo boton compartir_inicio
+		const task_share_el = document.createElement('button');
+		task_share_el.classList.add('share');
+		task_share_el.innerText = 'Share';//
+// añadiendo boton compartir_fin*/
 		task_actions_el.appendChild(task_edit_el);
 		task_actions_el.appendChild(task_delete_el);
+/* añadiendo boton compartir_inicio
+		task_actions_el.appendChild(task_share_el);
+// añadiendo boton compartir_fin*/
 
 		task_el.appendChild(task_actions_el);
 
